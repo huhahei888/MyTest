@@ -17,7 +17,7 @@ object CommonWeChatFriendsSparkContext {
       line.split("\t")
     }).map(id => (id, 1)).reduceByKey((x, y) => x + y)
     resultData.map(x => {
-      x._1 + "\t" + x._2
+      x._1 + "\t"
     }).saveAsTextFile(outPath)
 
   }
